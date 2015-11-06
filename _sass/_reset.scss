@@ -1,0 +1,39 @@
+/* 
+Generic 
+*/
+
+*, *:before, *:after{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+}
+
+html,
+form,
+input,
+textarea,
+select,
+option,
+button{
+	font-family: $font-default;
+	font-size: $font-size;
+	font-weight: lighter;
+	line-height:  $line-height;
+
+	@include media-query($tablet) {
+    	font-size: $font-size * 1.25;
+	}
+
+	@include media-query($desktop) {
+    	font-size: $font-size * 1.5;
+	}
+}
+
+button,
+input[type="submit"]{
+	-webkit-appearance: none;
+	border: none;
+	cursor: pointer;
+}
+

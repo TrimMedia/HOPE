@@ -1,0 +1,32 @@
+/* 
+Settings 
+*/
+
+// color //
+$bg-color: #f2f1f0;
+$text-color: #333333;
+
+$white: $bg-color;
+$black: $text-color;
+
+$blue: #495f99;
+$dark-green: #33662e;
+$light-green: #b5d96d;
+
+$light-gray: #a9a8a8;
+$dark-gray: #808080;
+
+// size //
+$font-size: 20px;
+$line-height: 1.4em;
+$spacing-unit: 1rem;
+$border-radius: .5em;
+
+// fonts //
+$font-default: "adobe-garamond-pro", serif;
+$font-alt: "Avenir", sans-serif;
+
+// breakpoints //
+$tablet: 600px;
+$laptop: 900px;
+$desktop: 1200px;
