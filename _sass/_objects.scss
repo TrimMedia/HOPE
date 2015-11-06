@@ -5,7 +5,8 @@ Objects
 .container{
 	width: 90%;
 	max-width: 1000px;
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
 
 	@include media-query($tablet) {
 		width: 80%;
@@ -28,7 +29,7 @@ Objects
 		clear: both;
 	}
 
-	@include media-query($tablet) {
+	@include media-query($laptop) {
     	> .column{
     		float: left;
     		&.full { width: 100%; }

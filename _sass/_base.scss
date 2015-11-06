@@ -10,12 +10,14 @@ html{
 }
 
 body{
+	margin-top: 0;
 	background: $bg-color;
 	color: $text-color;
 }
 
 h1{
 	font-size: 1.75em;
+	line-height: 1.25em;
 }
 
 h2{
@@ -143,7 +145,7 @@ input[type="submit"]{
 }
 
 .logo{
-	max-width: 12.5em;
+	max-width: 15em;
 	display: block;
 	margin: 0 auto;
 	text-align: center;
@@ -155,6 +157,9 @@ input[type="submit"]{
 	font-weight: normal;
 	text-align: center;
 	color: $blue;
+	@include media-query($laptop){
+		text-align: left;
+	}
 }
 
 .subtitle{
