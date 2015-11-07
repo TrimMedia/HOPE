@@ -51,3 +51,42 @@ Components
 	display: block;
 }
 
+.link-list{
+	margin: 0 auto;
+	text-align: center;
+	font-family: $font-alt;
+	margin-bottom: 1em;
+}
+
+.link-list__item{
+	margin-top: .5em;
+
+	> a:hover{
+		opacity: .5;
+	}
+}
+
+.sponsors{
+	> h2{
+		text-align: center;
+	}
+}
+
+.image-list{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.image-list__item{
+	display: inline-block;
+	max-width: 5rem;
+	max-height: 5rem;
+	margin: .5em;
+	border-radius: 100%;
+	overflow: hidden;
+}
+
+
+

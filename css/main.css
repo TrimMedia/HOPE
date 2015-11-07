@@ -49,7 +49,7 @@ input[type="submit"] {
 Base 
 */
 * + * {
-  margin-top: 1rem; }
+  margin-top: 1em; }
 
 html {
   font-family: "adobe-garamond-pro", serif; }
@@ -173,6 +173,9 @@ input[type="submit"] {
   display: block;
   margin: 0 auto;
   text-align: center; }
+  .logo.-gray {
+    opacity: .25;
+    max-width: 7.5em; }
 
 .title {
   font-family: "Avenir", sans-serif;
@@ -184,9 +187,12 @@ input[type="submit"] {
     .title {
       text-align: left; } }
 
+.heading {
+  color: #495f99; }
+
 .subtitle {
   text-align: center;
-  margin-top: 0.5rem;
+  margin-top: 0.5em;
   color: #808080; }
 
 .subheading {
@@ -194,10 +200,15 @@ input[type="submit"] {
   font-style: italic;
   font-weight: normal;
   color: #a9a8a8;
-  margin-top: 0.25rem; }
+  margin-top: 0.25em; }
 
-.muted {
+.muted, .copyright {
   opacity: .5; }
+
+.copyright {
+  font-size: .75em;
+  text-align: center;
+  margin-bottom: 1rem; }
 
 .blue-bg {
   background-color: #495f99;
@@ -293,6 +304,46 @@ Components
 
 .banner__img {
   display: block; }
+
+.link-list {
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Avenir", sans-serif;
+  margin-bottom: 1em; }
+
+.link-list__item {
+  margin-top: .5em; }
+  .link-list__item > a:hover {
+    opacity: .5; }
+
+.sponsors > h2 {
+  text-align: center; }
+
+.image-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.image-list__item {
+  display: inline-block;
+  max-width: 5rem;
+  max-height: 5rem;
+  margin: .5em;
+  border-radius: 100%;
+  overflow: hidden; }
 
 /* 
 Trumps & Hacks 
