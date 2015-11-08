@@ -64,11 +64,20 @@ Components
 	> a:hover{
 		opacity: .5;
 	}
+
+	@include media-query($laptop){
+		display: inline-block;
+		margin-right: 2em;
+		&:last-child{
+			margin-right: 0;
+		}
+	}
 }
 
 .sponsors{
 	> h2{
 		text-align: center;
+		margin-top: 1em;
 	}
 }
 
@@ -83,9 +92,70 @@ Components
 	display: inline-block;
 	max-width: 5rem;
 	max-height: 5rem;
-	margin: .5em;
+	margin: 1em;
 	border-radius: 100%;
 	overflow: hidden;
+}
+
+.blue-bg{
+	background-color: $blue;
+	color: $white;
+
+	> button, input[type="submit"], .button{
+		background: transparentize($bg-color, .85);
+		color: $bg-color;
+		&:hover{
+			background: transparentize($bg-color, .70);
+		}
+	}
+}
+
+.light-green-bg{
+	background-color: $light-green;
+
+	> button, input[type="submit"], .button{
+		background: transparentize($text-color, .85);
+		color: $text-color;
+		&:hover{
+			background: transparentize($text-color, .70);
+		}
+	}
+}
+
+.dark-green-bg{
+	background-color: $dark-green;
+	color: $white;
+
+	> button, input[type="submit"], .button{
+		background: transparentize($bg-color, .85);
+		color: $bg-color;
+		&:hover{
+			background: transparentize($bg-color, .70);
+		}
+	}
+}
+
+.cta-list{
+	text-align: center;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.cta-list__item{
+	flex-basis: 20em;
+	flex-grow: 1;
+	font-size: .9em;
+	line-height: $line-height;
+	padding: 3em 2em;
+	margin: 0;
+	overflow: hidden;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+
 }
 
 

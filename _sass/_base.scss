@@ -57,7 +57,8 @@ textarea,
 select,
 option,
 button,
-input[type="submit"]{
+input[type="submit"],
+.button{
 	transition: .3s ease;
 	transition-property: background color opacity;
 	border-radius: $border-radius;
@@ -105,9 +106,11 @@ input[type="checkbox"]{
 }
 
 button,
-input[type="submit"]{
+input[type="submit"],
+.button{
 	font-family: $font-alt;
 	font-style: italic;
+	font-weight: 500;
 	background: transparentize($dark-gray, .5);
 	color: inherit;
 	padding: .5em 1em;
@@ -145,7 +148,7 @@ input[type="submit"]{
 }
 
 .logo{
-	max-width: 15em;
+	max-width: 12.5em;
 	display: block;
 	margin: 0 auto;
 	text-align: center;
@@ -194,18 +197,4 @@ input[type="submit"]{
 	font-size: .75em;
 	text-align: center;
 	margin-bottom: 1rem;
-}
-
-.blue-bg{
-	background-color: $blue;
-	color: $white;
-}
-
-.light-green-bg{
-	background-color: $light-green;
-}
-
-.dark-green-bg{
-	background-color: $dark-green;
-	color: $white;
 }
