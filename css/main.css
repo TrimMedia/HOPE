@@ -86,14 +86,15 @@ a {
 
 blockquote {
   width: 50%;
-  min-width: 15em;
+  min-width: 12.5em;
   margin: 1.5em auto;
   text-align: center;
   font-style: italic;
   color: #808080;
-  position: relative;
-  background: url("../assets/img/quote-left.png") top left no-repeat, url("../assets/img/quote-right.png") bottom right no-repeat;
-  background-size: 3em; }
+  position: relative; }
+  blockquote p {
+    background: url("../assets/img/quote-left.svg") top left no-repeat, url("../assets/img/quote-right.svg") bottom right no-repeat;
+    background-size: 3em; }
   blockquote cite {
     display: block;
     font-family: "Avenir", sans-serif;
@@ -343,7 +344,7 @@ Components
 
 .sponsors > h2 {
   text-align: center;
-  margin-top: 1em; }
+  margin-top: 1.5em; }
 
 .image-list {
   display: -webkit-box;
