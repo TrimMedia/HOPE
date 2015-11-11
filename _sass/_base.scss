@@ -200,6 +200,9 @@ input[type="submit"],
 
 .heading{
 	color: $blue;
+	@include media-query($laptop){
+		margin-top: 1.5em;
+	}
 }
 
 .subtitle{
