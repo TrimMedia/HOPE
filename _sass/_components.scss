@@ -198,5 +198,35 @@ Components
 
 }
 
+.donation-list__item{
+	padding: 1em;
+	margin: 0;
+	border-bottom: 2px solid #dfe4dd;
+	transition: background .3s ease;
+	display: flex;
+	flex-wrap: wrap;
+
+	&:hover{
+		background: #dfe4dd;
+	}
+
+	&:last-child{
+		border-bottom: none;
+	}
+
+	> .info{
+		flex: 1 0 70%;
+	}
+
+	> .price{
+		margin: auto 0;
+		font-family: $font-alt;
+		font-style: italic;
+		color: $dark-green;
+		font-size: 2.5em;
+		line-height: 2em;
+		flex: 0 0 auto;
+	}
+}
 
 

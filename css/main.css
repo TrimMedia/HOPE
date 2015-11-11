@@ -75,6 +75,9 @@ h4 {
 ul {
   list-style-type: none; }
 
+p > ul {
+  list-style-type: circle; }
+
 a {
   text-decoration: none;
   color: inherit;
@@ -469,6 +472,40 @@ Components
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+
+.donation-list__item {
+  padding: 1em;
+  margin: 0;
+  border-bottom: 2px solid #dfe4dd;
+  -webkit-transition: background .3s ease;
+          transition: background .3s ease;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+  .donation-list__item:hover {
+    background: #dfe4dd; }
+  .donation-list__item:last-child {
+    border-bottom: none; }
+  .donation-list__item > .info {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 70%;
+        -ms-flex: 1 0 70%;
+            flex: 1 0 70%; }
+  .donation-list__item > .price {
+    margin: auto 0;
+    font-family: "Avenir", sans-serif;
+    font-style: italic;
+    color: #33662e;
+    font-size: 2.5em;
+    line-height: 2em;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto; }
 
 /* 
 Trumps & Hacks 
