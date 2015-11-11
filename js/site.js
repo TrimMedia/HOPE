@@ -11,6 +11,15 @@ window.addEventListener("load", function(){
 					graphs[i].classList.add("u-hidden");
 				}
 			};
+			for (var i = 0; i < graphLinks.length; i++) {
+				if(graphLinks[i].id == this.id){
+					this.classList.remove("link-list__item");
+				  	this.classList.add("link-list__item--active");
+				}else{
+				  	graphLinks[i].classList.remove("link-list__item--active");
+				  	graphLinks[i].classList.add("link-list__item");
+				}
+			};
 		});
 	}
 });

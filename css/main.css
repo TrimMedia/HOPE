@@ -334,28 +334,32 @@ Components
   font-family: "Avenir", sans-serif;
   margin-bottom: 1em; }
 
+.link-list__item, .link-list--interactive > .link-list__item--active {
+  margin-top: .5em; }
+  .link-list__item > a:hover, .link-list--interactive > .link-list__item--active > a:hover {
+    opacity: .5; }
+  @media screen and (min-width: 900px) {
+    .link-list__item, .link-list--interactive > .link-list__item--active {
+      display: inline-block;
+      margin-right: 2em; }
+      .link-list__item:last-child, .link-list--interactive > .link-list__item--active:last-child {
+        margin-right: 0; } }
+
 .link-list--interactive {
   text-align: left;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
   font-size: .75em; }
-  .link-list--interactive > .link-list__item {
+  .link-list--interactive > .link-list__item, .link-list--interactive > .link-list__item--active {
     display: inline-block;
     margin-right: 1em;
     color: #a9a8a8;
-    cursor: pointer; }
-
-.link-list__item {
-  margin-top: .5em; }
-  .link-list__item > a:hover {
-    opacity: .5; }
-  @media screen and (min-width: 900px) {
-    .link-list__item {
-      display: inline-block;
-      margin-right: 2em; }
-      .link-list__item:last-child {
-        margin-right: 0; } }
+    cursor: pointer;
+    -webkit-transition: color .3s ease;
+            transition: color .3s ease; }
+  .link-list--interactive > .link-list__item--active {
+    color: #333333; }
 
 .sponsors > h2 {
   text-align: center;
@@ -394,6 +398,7 @@ Components
   font-family: "Avenir";
   font-size: .75em;
   font-style: italic;
+  text-align: center;
   line-height: 1.4em;
   color: #a9a8a8; }
 

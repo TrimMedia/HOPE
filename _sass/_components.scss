@@ -58,22 +58,6 @@ Components
 	margin-bottom: 1em;
 }
 
-.link-list--interactive{
-	@extend .link-list;
-	text-align: left;
-	overflow-x: scroll;
-	overflow-y: hidden;
-	white-space: nowrap;
-	font-size: .75em;
-
-	> .link-list__item{
-		display: inline-block;
-		margin-right: 1em;
-		color: $light-gray;
-		cursor: pointer;
-	}
-}
-
 .link-list__item{
 	margin-top: .5em;
 
@@ -87,6 +71,28 @@ Components
 		&:last-child{
 			margin-right: 0;
 		}
+	}
+}
+
+.link-list--interactive{
+	@extend .link-list;
+	text-align: left;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
+	font-size: .75em;
+
+	> .link-list__item{
+		display: inline-block;
+		margin-right: 1em;
+		color: $light-gray;
+		cursor: pointer;
+		transition: color .3s ease;	
+	}
+
+	> .link-list__item--active{
+		@extend .link-list__item;
+		color: $text-color;
 	}
 }
 
@@ -125,6 +131,7 @@ Components
 		font-family: "Avenir";
 		font-size: .75em;
 		font-style: italic;
+		text-align: center;
 		line-height: 1.4em;
 		color: $light-gray;
 	}
