@@ -5,10 +5,6 @@ layout: default
 <div class="container">
 
   <div>
-    <img class="logo" src="assets/img/HOPE_logo.svg" alt="HOPE Leadership Academy Logo">
-  </div>
-
-  <div>
     <h1 class="title">Title</h1>
     <h3 class="subtitle">Subtitle</h3>
     <h2 class="heading">Heading</h2>
@@ -68,6 +64,80 @@ layout: default
     <button class="-light" disabled="true">Primary</button>
     <button class="-dark" disabled="true">Secondary</button>
     <button class="-outline" disabled="true">Outline</button>
+  </div>
+
+  <div>
+    <h2 class="heading">Program Timeline</h2>
+    <ul class="link-list--interactive" id="timeline-links">
+      <li class="link-list__item" id="year1">Year 1</li>
+      <li class="link-list__item" id="year2">Year 2</li>
+      <li class="link-list__item" id="year3">Year 3</li>
+    </ul>
+    <div class="timeline">
+      <ul class="timeline-list">
+        <li class="timeline-list__item--year" id="year1">
+          <span>Year 1</span>
+        </li>
+        <li class="timeline-list__item">
+          <p class="timeline__bubble blue-bg">
+            <em>Five Principles of Exemplary Leadership</em> Seminars (Posner & Kouzes)
+          </p>
+          <img class="timeline__icon" src="/assets/img/timeline-icon.png">
+        </li>
+        <li class="timeline-list__item">
+          <p class="timeline__bubble light-green-bg">
+            Speech Writing and Oratorical Contest
+          </p>
+          <img class="timeline__icon" src="/assets/img/timeline-icon.png">
+        </li>
+        <li class="timeline-list__item--year" id="year2">
+          <span>Year 2</span>
+        </li>
+        <li class="timeline-list__item">
+          <p class="timeline__bubble dark-green-bg">
+            <em>Five Principles of Exemplary Leadership</em> Seminars (Posner & Kouzes)
+          </p>
+          <img class="timeline__icon" src="/assets/img/timeline-icon.png">
+        </li>
+        <li class="timeline-list__item--year" id="year3">
+          <span>Year 3</span>
+        </li>
+        <li class="timeline-list__item">
+          <p class="timeline__bubble blue-bg">
+            <em>Five Principles of Exemplary Leadership</em> Seminars (Posner & Kouzes)
+          </p>
+          <img class="timeline__icon" src="/assets/img/timeline-icon.png">
+        </li>
+        <li class="timeline-list__item">
+          <p class="timeline__bubble light-green-bg">
+            Speech Writing and Oratorical Contest
+          </p>
+          <img class="timeline__icon" src="/assets/img/timeline-icon.png">
+        </li>
+      </ul>
+      <div class="timeline__line"></div>
+    </div>
+    <script>
+      var timelineLinks = document.querySelector("#timeline-links").querySelectorAll(".link-list__item");
+      var timeline = document.querySelector(".timeline-list");
+      var years = document.querySelectorAll(".timeline-list__item--year");
+
+      console.log(years);
+
+      for (var i = 0; i < timelineLinks.length; i++) {
+        timelineLinks[i].addEventListener("click", function(){
+          for (var i = 0; i < years.length; i++) {
+            if(years[i].id == this.id){
+              if(years[i].id == "year1"){
+                timeline.scrollLeft = 0;
+              }else{
+                timeline.scrollLeft = years[i].offsetLeft - 10;
+              }
+            }
+          };
+        })
+      };
+    </script>
   </div>
 
   <div>

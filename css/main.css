@@ -498,12 +498,84 @@ Components
     margin-right: 5%; }
   .donation-list__item > .price {
     margin: auto 0;
-    width: 6rem;
+    width: 7rem;
     font-family: "Avenir", sans-serif;
     font-style: italic;
     color: #33662e;
     font-size: 2.5em;
     line-height: 2em; }
+
+.timeline {
+  position: relative; }
+  .timeline:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    height: 100%;
+    width: .5em;
+    content: '';
+    background: -webkit-linear-gradient(left, rgba(242, 241, 240, 0), #f2f1f0);
+    background: linear-gradient(to right, rgba(242, 241, 240, 0), #f2f1f0);
+    z-index: 1; }
+  .timeline:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    width: .5em;
+    content: '';
+    background: -webkit-linear-gradient(right, rgba(242, 241, 240, 0), #f2f1f0);
+    background: linear-gradient(to left, rgba(242, 241, 240, 0), #f2f1f0);
+    z-index: 1; }
+
+.timeline__line {
+  width: 100%;
+  height: 2px;
+  background: #a9a8a8;
+  position: absolute;
+  bottom: -webkit-calc(1.5em - 2px);
+  bottom: calc(1.5em - 2px);
+  z-index: -1; }
+
+.timeline-list {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  z-index: 0; }
+
+.timeline-list__item, .timeline-list__item--year {
+  display: inline-block;
+  white-space: normal;
+  width: 12.5em;
+  margin: .5rem; }
+
+.timeline-list__item--year {
+  width: auto;
+  margin: 1em;
+  font-weight: bold;
+  color: #a9a8a8;
+  position: relative; }
+
+.timeline__bubble {
+  position: relative;
+  padding: .5em;
+  border-radius: .5em; }
+  .timeline__bubble:after {
+    position: absolute;
+    bottom: -.5em;
+    display: block;
+    content: '';
+    background: inherit;
+    height: 1.5em;
+    width: 1em;
+    border-radius: 100%;
+    z-index: -1; }
+
+.timeline__icon {
+  width: 2em;
+  display: block; }
 
 /* 
 Trumps & Hacks 

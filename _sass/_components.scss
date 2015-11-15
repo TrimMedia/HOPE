@@ -221,13 +221,95 @@ Components
 
 	> .price{
 		margin: auto 0;
-		width: 6rem;
+		width: 7rem;
 		font-family: $font-alt;
 		font-style: italic;
 		color: $dark-green;
 		font-size: 2.5em;
 		line-height: 2em;
 	}
+}
+
+.timeline{
+	position: relative;
+
+	&:after{
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: block;
+		height: 100%;
+		width: .5em;
+		content: '';
+		background: linear-gradient(to right, transparentize($white,1), $white);
+		z-index: 1
+	}
+	&:before{
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		height: 100%;
+		width: .5em;
+		content: '';
+		background: linear-gradient(to left, transparentize($white,1), $white);
+		z-index: 1
+	}
+}
+
+.timeline__line{
+	width: 100%;
+	height: 2px;
+	background: $light-gray;
+	position: absolute;
+	bottom: calc(1.5em - 2px);
+	z-index: -1;
+}
+
+.timeline-list{
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
+	z-index: 0;
+}
+
+.timeline-list__item{
+	display: inline-block;
+	white-space: normal;
+	width: 12.5em;
+	margin: .5rem;
+}
+
+.timeline-list__item--year{
+	@extend .timeline-list__item;
+	width: auto;
+	margin: 1em;
+	font-weight: bold;
+	color: $light-gray;
+	position: relative;
+}
+
+.timeline__bubble{
+	position: relative;
+	padding: .5em;
+	border-radius: .5em;
+
+	&:after{
+		position: absolute;
+		bottom: -.5em;
+		display: block;
+		content: '';
+		background: inherit;
+		height: 1.5em;
+		width: 1em;
+		border-radius: 100%;
+		z-index: -1;
+	}
+}
+
+.timeline__icon{
+	width: 2em;
+	display: block;
 }
 
 
