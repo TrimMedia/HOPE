@@ -494,18 +494,16 @@ Components
     -webkit-box-flex: 1;
     -webkit-flex: 1 0 70%;
         -ms-flex: 1 0 70%;
-            flex: 1 0 70%; }
+            flex: 1 0 70%;
+    margin-right: 5%; }
   .donation-list__item > .price {
     margin: auto 0;
+    width: 6rem;
     font-family: "Avenir", sans-serif;
     font-style: italic;
     color: #33662e;
     font-size: 2.5em;
-    line-height: 2em;
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 auto;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto; }
+    line-height: 2em; }
 
 /* 
 Trumps & Hacks 
