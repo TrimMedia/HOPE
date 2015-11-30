@@ -1,0 +1,103 @@
+---
+layout: default
+
+title: Program Overview
+banner: "/assets/img/home-banner.jpg"
+intro: "The purpose of HOPE Leadership Academy is to identify students who have leadership potential, provide leadership and mentoring training through our three year, service oriented program, and furnish program graduates as peer mentors to students in poverty.  Our goal is to decrease the dropout rate and thus improve the quality of life in our schools, communities, and state."
+---
+
+<section>
+	<div class="container">
+	    <h2 class="heading">Program Timeline</h2>
+	    <h4 class="subheading">Scroll or select a year to navigate the timeline</h4>
+	    <ul class="link-list--interactive" id="timeline-links">
+	      <li class="link-list__item link-list__item--active" id="year1">Year 1</li>
+	      <li class="link-list__item" id="year2">Year 2</li>
+	      <li class="link-list__item" id="year3">Year 3</li>
+	    </ul>
+	</div>
+    <div class="timeline">
+      <ul class="timeline-list">
+        <li class="timeline-list__item--year" id="year1">
+          <span>Year 1</span>
+        </li>
+        <li class="timeline-list__item">
+          <p class="timeline__bubble blue-bg">
+            <em>Five Principles of Exemplary Leadership</em> Seminars (Posner & Kouzes)
+          </p>
+          <img class="timeline__icon" src="/assets/img/timeline-icon.png">
+        </li>
+        <li class="timeline-list__item">
+          <p class="timeline__bubble light-green-bg">
+            Speech Writing and Oratorical Contest
+          </p>
+          <img class="timeline__icon" src="/assets/img/timeline-icon.png">
+        </li>
+        <li class="timeline-list__item--year" id="year2">
+          <span>Year 2</span>
+        </li>
+        <li class="timeline-list__item">
+          <p class="timeline__bubble dark-green-bg">
+            <em>Five Principles of Exemplary Leadership</em> Seminars (Posner & Kouzes)
+          </p>
+          <img class="timeline__icon" src="/assets/img/timeline-icon.png">
+        </li>
+        <li class="timeline-list__item--year" id="year3">
+          <span>Year 3</span>
+        </li>
+        <li class="timeline-list__item">
+          <p class="timeline__bubble blue-bg">
+            <em>Five Principles of Exemplary Leadership</em> Seminars (Posner & Kouzes)
+          </p>
+          <img class="timeline__icon" src="/assets/img/timeline-icon.png">
+        </li>
+        <li class="timeline-list__item">
+          <p class="timeline__bubble light-green-bg">
+            Speech Writing and Oratorical Contest
+          </p>
+          <img class="timeline__icon" src="/assets/img/timeline-icon.png">
+        </li>
+      </ul>
+      <div class="timeline__line"></div>
+    
+    <script>
+		var timelineLinks = document.querySelector("#timeline-links").querySelectorAll(".link-list__item");
+		var timeline = document.querySelector(".timeline-list");
+		var years = document.querySelectorAll(".timeline-list__item--year");
+
+		console.log(years);
+
+		for (var i = 0; i < timelineLinks.length; i++) {
+			timelineLinks[i].addEventListener("click", function(){
+				for (var i = 0; i < years.length; i++) {
+					if(years[i].id == this.id){
+						if(years[i].id == "year1"){
+							timeline.scrollLeft = 0;
+						}
+						else{
+							timeline.scrollLeft = years[i].offsetLeft - 20;
+						}
+					}
+				}
+				for (var i = 0; i < timelineLinks.length; i++) {
+					if(timelineLinks[i].id == this.id){
+						this.classList.add('link-list__item--active');
+					}else{
+						timelineLinks[i].classList.remove('link-list__item--active');
+					}
+				};
+			});
+		};
+    </script>
+</section>
+<!--<section class="container">
+	<h2 class="heading">Participating Schools</h2>
+	<p>Awaiting content...</p>
+</section>-->
+<ul class="cta-list">
+	<li class="cta-list__item dark-green-bg">
+		<h2>Get Involved</h2>
+		<p>Improve graduation rates by sponsoring students and teachers in our program.</p>
+		<a class="button" href="/donate">Learn More</a>
+	</li>
+</ul>

@@ -10,5 +10,6 @@
     "grunt-sass": "^1.1.0-beta",
     "grunt-shell": "^1.1.2",
     "load-grunt-tasks": "~0.6.0"
-  }
+  },
+  "dependencies": {}
 }

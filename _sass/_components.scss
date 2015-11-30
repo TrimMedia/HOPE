@@ -81,13 +81,14 @@ Components
 	overflow-y: hidden;
 	white-space: nowrap;
 	font-size: .75em;
+	-webkit-overflow-scrolling: touch;
 
 	> .link-list__item{
 		display: inline-block;
 		margin-right: 1em;
 		color: $light-gray;
 		cursor: pointer;
-		transition: color .3s ease;	
+		transition: color .3s ease;
 	}
 
 	> .link-list__item--active{
@@ -126,7 +127,16 @@ Components
 	}
 }
 
+.graph-list{
+	margin-bottom: $spacing-unit;
+	padding-bottom: $spacing-unit;
+}
+
 .graph-list__item{
+	&:last-child{
+		margin-bottom: 1em;
+	}
+
 	& figcaption{
 		font-family: "Avenir";
 		font-size: .75em;
@@ -177,10 +187,12 @@ Components
 
 .cta-list{
 	text-align: center;
-	margin: 0;
 	display: flex;
 	flex-wrap: wrap;
 }
+	header + .cta-list{
+		margin-top: 0;
+	}
 
 .cta-list__item{
 	flex-basis: 20em;
@@ -232,6 +244,8 @@ Components
 
 .timeline{
 	position: relative;
+	margin-bottom: $spacing-unit;
+	padding-bottom: $spacing-unit;
 
 	&:after{
 		position: absolute;
@@ -264,6 +278,7 @@ Components
 	position: absolute;
 	bottom: calc(1.5em - 2px);
 	z-index: -1;
+	margin-bottom: $spacing-unit;
 }
 
 .timeline-list{
@@ -271,6 +286,7 @@ Components
 	overflow-y: hidden;
 	white-space: nowrap;
 	z-index: 0;
+	-webkit-overflow-scrolling: touch;
 }
 
 .timeline-list__item{

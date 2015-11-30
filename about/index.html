@@ -78,4 +78,41 @@ intro: "The purpose of HOPE Leadership Academy is to identify students who have 
 			</figure>
 		</li>
 	</ul>
+	<script>
+		var graphLinks = document.querySelector("#graph-links").querySelectorAll(".link-list__item");
+		var graphs = document.querySelector("#graphs").querySelectorAll("figure");
+
+		for (var i = 0; i < graphLinks.length; i++) {
+			graphLinks[i].addEventListener("click",function(){
+				for (var i = 0; i < graphs.length; i++) {
+					if(graphs[i].id == this.id){
+						graphs[i].classList.remove("u-hidden");
+					}else{
+						graphs[i].classList.add("u-hidden");
+					}
+				};
+				for (var i = 0; i < graphLinks.length; i++) {
+					if(graphLinks[i].id == this.id){
+						this.classList.remove("link-list__item");
+					  	this.classList.add("link-list__item--active");
+					}else{
+					  	graphLinks[i].classList.remove("link-list__item--active");
+					  	graphLinks[i].classList.add("link-list__item");
+					}
+				};
+			});
+		}
+	</script>
 </section>
+<ul class="cta-list">
+	<li class="cta-list__item light-green-bg">
+		<h2>Program Overview</h2>
+		<p>Explore the details and successes of our 3-year program</p>
+		<a class="button" href="/program">Learn More</a>
+	</li>
+	<li class="cta-list__item dark-green-bg">
+		<h2>Get Involved</h2>
+		<p>Improve graduation rates by sponsoring students and teachers in our program.</p>
+		<a class="button" href="/donate">Learn More</a>
+	</li>
+</ul>
