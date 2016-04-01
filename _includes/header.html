@@ -1,11 +1,11 @@
-<header class="header" style="background-image: url('../{{page.banner}}');">
+<header class="header" style="background-image: url('{{site.baseurl}}{{page.banner}}');">
   <div class="row">
     <div class="header__content half column">
-      <a class="logo" href="/">
-        <img src="/assets/img/HOPE_logo.svg" alt="HOPE Leadership Academy Logo">
+      <a class="logo" href="{{site.baseurl}}/">
+        <img src="{{site.baseurl}}/assets/img/HOPE_logo.svg" alt="HOPE Leadership Academy Logo">
       </a>
       <div class="banner">
-        <img class="banner__img" src="{{ page.banner }}" alt="Page Banner">
+        <img class="banner__img" src="{{site.baseurl}}{{ page.banner }}" alt="Page Banner">
       </div>
       <div class="container">
         <h1 class="title">
