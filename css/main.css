@@ -440,6 +440,7 @@ Components
       background: rgba(242, 241, 240, 0.3); }
 
 .cta-list {
+  margin-top: 2em;
   text-align: center;
   display: -webkit-box;
   display: -webkit-flex;
@@ -506,6 +507,11 @@ header + .cta-list {
         -ms-flex: 1 0 70%;
             flex: 1 0 70%;
     margin-right: 5%; }
+    .donation-list__item > .info > ul {
+      list-style-type: circle;
+      margin-left: 1em; }
+    .donation-list__item > .info li {
+      margin-top: .25em; }
   .donation-list__item > .price {
     margin: auto 0;
     width: 7rem;

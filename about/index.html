@@ -3,37 +3,41 @@ layout: default
 
 title: Our Mission
 banner: "/assets/img/home-banner.jpg"
-intro: "The purpose of HOPE Leadership Academy is to identify students who have leadership potential, provide leadership and mentoring training through our three year, service oriented program, and furnish program graduates as peer mentors to students in poverty.  Our goal is to decrease the dropout rate and thus improve the quality of life in our schools, communities, and state."
+intro: "The mission of H.O.P.E. Leadership Academy is to decrease the dropout rate and thus improve the quality of life in our schools, community, and state.  
+<br><br>
+By improving graduation rates, we can change lives, eradicate poverty, and impact the local and state economy."
+
+organizers:
+- name: "Libby Parker"
+  img_path: "http://placehold.it/150x150"
+  bio: ""
+
+- name: "Todd Powers"
+  img_path: "http://placehold.it/150x150"
+  bio: ""
+
+- name: "Shalunda Sherrod"
+  img_path: "http://placehold.it/150x150"
+  bio: ""
+
+- name: "Allen Perkins"
+  img_path: "http://placehold.it/150x150"
+  bio: ""
+
+- name: "Patricia Dunn Demos"
+  img_path: "http://placehold.it/150x150"
+  bio: ""
 ---
 
 <section class="container">
 	<h2 class="heading">Program Organizers</h2>
 	<ul class="image-list">
+		{% for o in page.organizers %}
 		<li class="image-list__item">
-			<img src="http://placehold.it/150x150">
-			<h2>First Last</h2>
-			<h4 class="subheading">Role, Title</h4>
+			<img src="{{ o.img_path }}">
+			<h3>{{ o.name }}</h3>
 		</li>
-		<li class="image-list__item">
-			<img src="http://placehold.it/150x150">
-			<h2>First Last</h2>
-			<h4 class="subheading">Role, Title</h4>
-		</li>
-		<li class="image-list__item">
-			<img src="http://placehold.it/150x150">
-			<h2>First Last</h2>
-			<h4 class="subheading">Role, Title</h4>
-		</li>
-		<li class="image-list__item">
-			<img src="http://placehold.it/150x150">
-			<h2>First Last</h2>
-			<h4 class="subheading">Role, Title</h4>
-		</li>
-		<li class="image-list__item">
-			<img src="http://placehold.it/150x150">
-			<h2>First Last</h2>
-			<h4 class="subheading">Role, Title</h4>
-		</li>
+		{% endfor %}
 	</ul>
 </section>
 <section class="container">
@@ -45,32 +49,32 @@ intro: "The purpose of HOPE Leadership Academy is to identify students who have 
 		<li class="link-list__item" id="aspire">Aspire Scores</li>
 	</ul>
 	<ul class="graph-list" id="graphs">
-		<li class="graph-list__item">
-			<figure id="attendance">
+		<li class="graph-list__item" id="attendance">
+			<figure>
 				<img src="/assets/img/line-graph.png" alt="Line graph of HOPE Leadership Academy student's attendance">
 				<figcaption>
 					Attendence increased x% amongst students in the HOPE Leadership Academy
 				</figcaption>
 			</figure>
 		</li>
-		<li class="graph-list__item">
-			<figure class="u-hidden" id="discipline">
+		<li class="graph-list__item u-hidden" id="discipline">
+			<figure>
 				<img src="/assets/img/pie-graph.png" alt="Pie graph of HOPE Leadership Academy student's grades">
 				<figcaption>
 					Attendence increased x% amongst students in the HOPE Leadership Academy
 				</figcaption>
 			</figure>
 		</li>
-		<li class="graph-list__item">
-			<figure class="u-hidden" id="academics">
+		<li class="graph-list__item u-hidden" id="academics">
+			<figure>
 				<img src="/assets/img/line-graph.png" alt="Line graph of HOPE Leadership Academy student's attendance">
 				<figcaption>
 					Attendence increased x% amongst students in the HOPE Leadership Academy
 				</figcaption>
 			</figure>
 		</li>
-		<li class="graph-list__item">
-			<figure class="u-hidden" id="aspire">
+		<li class="graph-list__item u-hidden" id="aspire">
+			<figure>
 				<img src="/assets/img/pie-graph.png" alt="Pie graph of HOPE Leadership Academy student's grades">
 				<figcaption>
 					Attendence increased x% amongst students in the HOPE Leadership Academy
@@ -80,7 +84,7 @@ intro: "The purpose of HOPE Leadership Academy is to identify students who have 
 	</ul>
 	<script>
 		var graphLinks = document.querySelector("#graph-links").querySelectorAll(".link-list__item");
-		var graphs = document.querySelector("#graphs").querySelectorAll("figure");
+		var graphs = document.querySelector("#graphs").querySelectorAll("graph-list__item");
 
 		for (var i = 0; i < graphLinks.length; i++) {
 			graphLinks[i].addEventListener("click",function(){

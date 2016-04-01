@@ -3,7 +3,7 @@ layout: default
 
 title: Program Overview
 banner: "/assets/img/home-banner.jpg"
-intro: "The purpose of HOPE Leadership Academy is to identify students who have leadership potential, provide leadership and mentoring training through our three year, service oriented program, and furnish program graduates as peer mentors to students in poverty.  Our goal is to decrease the dropout rate and thus improve the quality of life in our schools, communities, and state."
+intro: "H.O.P.E. Leadership Academy is a three-year program that incorporates Posner & Kouzes’s Five Practices of Exemplary Leadership, Covey’s 7 Habits of Highly Effective Teens, as well as writing, iMovie production, public speaking, creative arts, collaboration, and research techniques."
 ---
 
 <section>
@@ -59,38 +59,31 @@ intro: "The purpose of HOPE Leadership Academy is to identify students who have 
         </li>
       </ul>
       <div class="timeline__line"></div>
-    
-    <script>
-		var timelineLinks = document.querySelector("#timeline-links").querySelectorAll(".link-list__item");
-		var timeline = document.querySelector(".timeline-list");
-		var years = document.querySelectorAll(".timeline-list__item--year");
-
-		console.log(years);
-
-		for (var i = 0; i < timelineLinks.length; i++) {
-			timelineLinks[i].addEventListener("click", function(){
-				for (var i = 0; i < years.length; i++) {
-					if(years[i].id == this.id){
-						if(years[i].id == "year1"){
-							timeline.scrollLeft = 0;
-						}
-						else{
-							timeline.scrollLeft = years[i].offsetLeft - 20;
-						}
-					}
-				}
-				for (var i = 0; i < timelineLinks.length; i++) {
-					if(timelineLinks[i].id == this.id){
-						this.classList.add('link-list__item--active');
-					}else{
-						timelineLinks[i].classList.remove('link-list__item--active');
-					}
-				};
-			});
-		};
-    </script>
 </section>
-<!--<section class="container">
+<section class="container">
+  <p>
+    Each year has a different theme or leadership focus. The training includes a one-week course, usually in the summer, along with service projects and leadership opportunities throughout the school year.
+  </p>
+  <h3 class="heading">Year 1 “Why My Voice Is Important”</h3>
+  <p>
+    Speech Writing, Public Speaking, T-Shirt Design, iMovie Creation on the 7 Habits of Highly Effective Teens, Five Practices of Exemplary Leadership, Service Projects.
+  </p>
+  <h3 class="heading">Year 2 “How My Passion Impacts the World”</h3>
+  <p>
+    Review of Five Practices of Exemplary Leadership, Writing Reflections, Speech Writing, Public Speaking, Research Non-profits, Team Presentations, iMovie Creation promoting your school, Volunteer hours at a local non-profit.
+  </p>
+  <h3 class="heading">Year 3 “How My Optimism Leads to a Greater Future”</h3>
+  <p>
+    Career Interest Inventory, Research Career Options, Develop plan/goals for future, Individual Presentation “Roadmap to My Future,” Speech Writing, Public Speaking, College Visits, Job Shadowing.
+  </p>
+  <h3 class="heading">Beyond Year 3:</h3> 
+  <p>
+    Mentor Training, Assist Teachers at Year 1 &2 Programs, Mentor younger Cadets, Seminars on Leadership.
+    <br><br>
+  </p>
+</section>
+<!--
+<section class="container">
 	<h2 class="heading">Participating Schools</h2>
 	<p>Awaiting content...</p>
 </section>-->
@@ -101,3 +94,33 @@ intro: "The purpose of HOPE Leadership Academy is to identify students who have 
 		<a class="button" href="/donate">Learn More</a>
 	</li>
 </ul>
+
+<script>
+  var timelineLinks = document.querySelector("#timeline-links").querySelectorAll(".link-list__item");
+  var timeline = document.querySelector(".timeline-list");
+  var years = document.querySelectorAll(".timeline-list__item--year");
+
+  console.log(years);
+
+  for (var i = 0; i < timelineLinks.length; i++) {
+    timelineLinks[i].addEventListener("click", function(){
+      for (var i = 0; i < years.length; i++) {
+        if(years[i].id == this.id){
+          if(years[i].id == "year1"){
+            timeline.scrollLeft = 0;
+          }
+          else{
+            timeline.scrollLeft = years[i].offsetLeft - 20;
+          }
+        }
+      }
+      for (var i = 0; i < timelineLinks.length; i++) {
+        if(timelineLinks[i].id == this.id){
+          this.classList.add('link-list__item--active');
+        }else{
+          timelineLinks[i].classList.remove('link-list__item--active');
+        }
+      };
+    });
+  };
+</script>
