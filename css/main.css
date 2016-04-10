@@ -487,7 +487,6 @@ header + .cta-list {
 .donation-list__item {
   padding: 1em;
   margin: 0;
-  border-bottom: 2px solid #dfe4dd;
   -webkit-transition: background .3s ease;
           transition: background .3s ease;
   display: -webkit-box;
@@ -503,9 +502,9 @@ header + .cta-list {
     border-bottom: none; }
   .donation-list__item > .info {
     -webkit-box-flex: 1;
-    -webkit-flex: 1 0 70%;
-        -ms-flex: 1 0 70%;
-            flex: 1 0 70%;
+    -webkit-flex: 1 0 55%;
+        -ms-flex: 1 0 55%;
+            flex: 1 0 55%;
     margin-right: 5%; }
     .donation-list__item > .info > ul {
       list-style-type: circle;
@@ -514,12 +513,16 @@ header + .cta-list {
       margin-top: .25em; }
   .donation-list__item > .price {
     margin: auto 0;
-    width: 7rem;
+    width: 9rem;
     font-family: "Avenir", sans-serif;
     font-style: italic;
     color: #33662e;
-    font-size: 2.5em;
+    font-size: 2em;
     line-height: 2em; }
+    @media screen and (min-width: 900px) {
+      .donation-list__item > .price {
+        font-size: 2.5em;
+        text-align: right; } }
 
 .timeline {
   position: relative;
@@ -547,6 +550,41 @@ header + .cta-list {
     background: -webkit-linear-gradient(right, rgba(242, 241, 240, 0), #f2f1f0);
     background: linear-gradient(to left, rgba(242, 241, 240, 0), #f2f1f0);
     z-index: 1; }
+
+.quote {
+  width: 85%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; }
+  .quote__img {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 100%;
+    overflow: hidden; }
+  .quote__txt {
+    margin-right: 0; }
+  .quote--reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse; }
+    .quote--reverse > .quote__txt {
+      margin-right: 1.5em;
+      margin-left: 0; }
 
 .timeline__line {
   width: 100%;

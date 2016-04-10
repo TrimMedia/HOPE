@@ -18,75 +18,24 @@ intro: "H.O.P.E. Leadership Academy is a three-year program that incorporates Po
 	</div>
     <div class="timeline">
       <ul class="timeline-list">
-        <li class="timeline-list__item--year" id="year1">
-          <span>Year 1</span>
-        </li>
-        <li class="timeline-list__item">
-          <p class="timeline__bubble blue-bg">
-            <em>Five Principles of Exemplary Leadership</em> Seminars (Posner & Kouzes)
-          </p>
-          <img class="timeline__icon" src="{{site.baseurl}}/assets/img/timeline-icon.png">
-        </li>
-        <li class="timeline-list__item">
-          <p class="timeline__bubble light-green-bg">
-            Speech Writing and Oratorical Contest
-          </p>
-          <img class="timeline__icon" src="{{site.baseurl}}/assets/img/timeline-icon.png">
-        </li>
-        <li class="timeline-list__item--year" id="year2">
-          <span>Year 2</span>
-        </li>
-        <li class="timeline-list__item">
-          <p class="timeline__bubble dark-green-bg">
-            <em>Five Principles of Exemplary Leadership</em> Seminars (Posner & Kouzes)
-          </p>
-          <img class="timeline__icon" src="{{site.baseurl}}/assets/img/timeline-icon.png">
-        </li>
-        <li class="timeline-list__item--year" id="year3">
-          <span>Year 3</span>
-        </li>
-        <li class="timeline-list__item">
-          <p class="timeline__bubble blue-bg">
-            <em>Five Principles of Exemplary Leadership</em> Seminars (Posner & Kouzes)
-          </p>
-          <img class="timeline__icon" src="{{site.baseurl}}/assets/img/timeline-icon.png">
-        </li>
-        <li class="timeline-list__item">
-          <p class="timeline__bubble light-green-bg">
-            Speech Writing and Oratorical Contest
-          </p>
-          <img class="timeline__icon" src="{{site.baseurl}}/assets/img/timeline-icon.png">
-        </li>
+        {% for year in site.data.program %}
+          <li class="timeline-list__item--year" id="year{{ year.year }}">
+            <p>Year {{ year.year }}</p>
+            <em>{{ year.title }}</em>
+          </li>
+          {% for m in year.milestones %}
+            {% capture theCycle %}{% cycle 'blue-bg', 'light-green-bg', 'dark-green-bg' %}{% endcapture %}
+            <li class="timeline-list__item">
+              <p class="timeline__bubble {{ theCycle }}">
+                {{ m.text }}
+              </p>
+              <img class="timeline__icon" src="{{site.baseurl}}/assets/img/timeline-icon.png">
+            </li>
+          {% endfor %}
+        {% endfor %}
       </ul>
       <div class="timeline__line"></div>
 </section>
-<section class="container">
-  <p>
-    Each year has a different theme or leadership focus. The training includes a one-week course, usually in the summer, along with service projects and leadership opportunities throughout the school year.
-  </p>
-  <h3 class="heading">Year 1 “Why My Voice Is Important”</h3>
-  <p>
-    Speech Writing, Public Speaking, T-Shirt Design, iMovie Creation on the 7 Habits of Highly Effective Teens, Five Practices of Exemplary Leadership, Service Projects.
-  </p>
-  <h3 class="heading">Year 2 “How My Passion Impacts the World”</h3>
-  <p>
-    Review of Five Practices of Exemplary Leadership, Writing Reflections, Speech Writing, Public Speaking, Research Non-profits, Team Presentations, iMovie Creation promoting your school, Volunteer hours at a local non-profit.
-  </p>
-  <h3 class="heading">Year 3 “How My Optimism Leads to a Greater Future”</h3>
-  <p>
-    Career Interest Inventory, Research Career Options, Develop plan/goals for future, Individual Presentation “Roadmap to My Future,” Speech Writing, Public Speaking, College Visits, Job Shadowing.
-  </p>
-  <h3 class="heading">Beyond Year 3:</h3> 
-  <p>
-    Mentor Training, Assist Teachers at Year 1 &2 Programs, Mentor younger Cadets, Seminars on Leadership.
-    <br><br>
-  </p>
-</section>
-<!--
-<section class="container">
-	<h2 class="heading">Participating Schools</h2>
-	<p>Awaiting content...</p>
-</section>-->
 <ul class="cta-list">
 	<li class="cta-list__item dark-green-bg">
 		<h2>Get Involved</h2>
@@ -96,11 +45,9 @@ intro: "H.O.P.E. Leadership Academy is a three-year program that incorporates Po
 </ul>
 
 <script>
-  var timelineLinks = document.querySelector("#timeline-links").querySelectorAll(".link-list__item");
-  var timeline = document.querySelector(".timeline-list");
-  var years = document.querySelectorAll(".timeline-list__item--year");
-
-  console.log(years);
+  var timelineLinks = document.querySelector("#timeline-links").querySelectorAll(".link-list__item"),
+      timeline = document.querySelector(".timeline-list"),
+      years = document.querySelectorAll(".timeline-list__item--year");
 
   for (var i = 0; i < timelineLinks.length; i++) {
     timelineLinks[i].addEventListener("click", function(){

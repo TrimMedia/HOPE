@@ -17,38 +17,27 @@ secondary:
 <section class="container">
 	<h2 class="heading">Sponsorship Levels</h2>
 	<h4 class="subheading">6 ways you can support H.O.P.E. Click to donate</h4>
-
     <ul class="donation-list">
-      <li class="donation-list__item">
-        <div class="info">
-          <h2>Sponsor a Student</h2>
-          <p>
-            Adopt a student within your community for this Summer program, this will allow the student to participate all week in this leadership program, have two meals each day, and be partnered with a young professional to mentor him/her throughout the following school year.
-          </p>
-        </div>
-        <span class="price">$500</span>
-      </li>
-      <li class="donation-list__item">
-        <div class="info">
-          <h2>Sponsor a Teacher</h2>
-          <p>
-            Sponsor a teacher for this leadership academy. This provides classroom materials, pay, and training for the educator to work with all at-risk students throughout this Summer program. This Leadership Academy also provides one week of Continuing Education Units for all participating educators.
-          </p>
-        </div>
-        <span class="price">$750</span>
-      </li>
-      <li class="donation-list__item">
-        <div class="info">
-          <h2>Collaborator</h2>
-          <p>
-            <ul>
-              <li>Recognition on Leadership Academy website.</li> 
-              <li>Announced as sponsor at graduation ceremony.</li> 
-              <li>Personalized thank you letter from participating students.</li>
-            </ul>
-          </p>
-        </div>
-        <span class="price">$1000</span>
-      </li>
+      {% for tier in site.data.tiers %}
+      {% capture direction %}{% cycle '', 'quote--reverse' %}{% endcapture %}
+        <li class="donation-list__item">
+          <div class="info">
+            <h2>{{ tier.title }}</h2>
+            <p>{{ tier.text }}</p>
+          </div>
+          <span class="price">{{ tier.price }}</span>
+        </li>
+        <li class="quote {{direction}}">
+          {% if tier.testimonial %}
+            <div class="quote__img">
+              <img src="http://placehold.it/300x300">
+            </div>
+            <blockquote class="quote__txt">
+              <p>{{ tier.testimonial.text }}</p>
+              <cite>{{ tier.testimonial.name }}</cite>
+            </blockquote>
+          {% endif %}
+        </li>
+      {% endfor %}
     </ul>
 </section>

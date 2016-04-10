@@ -214,7 +214,6 @@ Components
 .donation-list__item{
 	padding: 1em;
 	margin: 0;
-	border-bottom: 2px solid #dfe4dd;
 	transition: background .3s ease;
 	display: flex;
 	flex-wrap: wrap;
@@ -228,7 +227,7 @@ Components
 	}
 
 	> .info{
-		flex: 1 0 70%;
+		flex: 1 0 55%;
 		margin-right: 5%;
 		> ul{
 			list-style-type: circle;
@@ -241,12 +240,16 @@ Components
 
 	> .price{
 		margin: auto 0;
-		width: 7rem;
+		width: 9rem;
 		font-family: $font-alt;
 		font-style: italic;
 		color: $dark-green;
-		font-size: 2.5em;
+		font-size: 2em;
 		line-height: 2em;
+		@include media-query($laptop){
+			font-size: 2.5em;
+			text-align: right;
+		}
 	}
 }
 
@@ -276,6 +279,35 @@ Components
 		content: '';
 		background: linear-gradient(to left, transparentize($white,1), $white);
 		z-index: 1
+	}
+}
+
+.quote{
+	width: 85%;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	text-align: left;
+	justify-content: space-around;
+
+	&__img{
+		width: 8rem;
+		height: 8rem;
+		border-radius: 100%;
+		overflow: hidden;
+	}
+
+	&__txt{
+		margin-right: 0;
+	}
+
+	&--reverse{
+		flex-direction: row-reverse;
+		> .quote__txt{
+			margin-right: 1.5em;
+			margin-left: 0;
+		}
 	}
 }
 
