@@ -365,9 +365,9 @@ Components
   .link-list--interactive > .link-list__item--active {
     color: #333333; }
 
-.sponsors > h2 {
-  text-align: center;
-  margin-top: 1.5em; }
+.sponsors {
+  color: #808080;
+  text-align: center; }
 
 .image-list {
   display: -webkit-box;
