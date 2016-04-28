@@ -148,6 +148,16 @@ Components
 	}
 }
 
+.btn{
+	&--small{
+		font-size: .75em;
+	}
+	&--outline{
+		background: none;
+		border: .1em solid;
+	}
+}
+
 .blue-bg{
 	background-color: $blue;
 	color: $white;
@@ -393,6 +403,32 @@ Components
 		position: relative;
 		padding-bottom: 56.25%;
 		height: 0;
+	}
+}
+
+.overlay{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(255,255,255,.95);
+	margin: 0;
+	z-index: 100;
+	overflow: auto;
+
+	& .container{
+		height: 100%;
+		margin: 1em auto;
+		@include media-query($laptop){
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		& iframe{
+			margin-top: 1em !important;
+		}
 	}
 }
 

@@ -45,8 +45,23 @@ secondary:
       {% endfor %}
     </ul>
 </section>
+<section class="overlay u-hidden" id="donationOverlay">
+  <div class="container">
+    <div>
+      <h1>Donate to HOPE Leadership Academy</h1>
+      <button class="btn--small btn--outline" id="noThanksBtn">No Thanks</button>
+    </div>
+    <script src="https://www.dntly.com/assets/js/v1/form.js" 
+            data-donately-id="act_db7809b55acf" 
+            data-stripe-publishable-key="pk_live_ahKAepi58DCsg9CnnuJsfFty" 
+            data-donately-campaign-id="3429" 
+            async>
+    </script>
+  </div>
+</section>
 <script type="text/javascript">
   window.onload = function(){
+    console.log('load');
     var videos = document.querySelectorAll('video');
     // loop through videos to attach event listeners
     for (var i = 0; i < videos.length; i++) {
@@ -64,6 +79,20 @@ secondary:
           this.muted = true;
         }
       })
+    };
+    // overlay show/hide
+    var overlay = document.querySelector('#donationOverlay'),
+        tiers = document.querySelectorAll('.donation-list__item'),
+        button = document.querySelector('#noThanksBtn');
+
+    button.addEventListener('click', function(){
+      overlay.classList.add('u-hidden');
+    })
+
+    for (var i = 0; i < tiers.length; i++) {
+      tiers[i].addEventListener('click', function(){
+        overlay.classList.remove('u-hidden');
+      });
     };
   }
 </script>

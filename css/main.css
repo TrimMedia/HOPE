@@ -414,6 +414,13 @@ Components
   line-height: 1.4em;
   color: #a9a8a8; }
 
+.btn--small {
+  font-size: .75em; }
+
+.btn--outline {
+  background: none;
+  border: .1em solid; }
+
 .blue-bg {
   background-color: #495f99;
   color: #f2f1f0; }
@@ -654,6 +661,36 @@ header + .cta-list {
     position: relative;
     padding-bottom: 56.25%;
     height: 0; }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  z-index: 100;
+  overflow: auto; }
+  .overlay .container {
+    height: 100%;
+    margin: 1em auto; }
+    @media screen and (min-width: 900px) {
+      .overlay .container {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center; } }
+    .overlay .container iframe {
+      margin-top: 1em !important; }
 
 /* 
 Trumps & Hacks 
