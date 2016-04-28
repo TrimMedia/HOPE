@@ -311,9 +311,15 @@ Components
 		border-radius: 100%;
 		overflow: hidden;
 		margin: 1.5em auto;
+		-webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
 
-		& > img{
+		& > img,
+		& > video{
 			display: block;
+		}
+
+		& > video{
+			max-width: 100%;
 		}
 	}
 }

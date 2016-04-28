@@ -30,7 +30,12 @@ secondary:
         <li class="quote {{direction}}">
           {% if tier.testimonial %}
             <div class="quote__img">
-              <img src="{{ site.baseurl }}/assets/img/students/{{ tier.testimonial.video }}.jpg">
+              <video autoplay loop muted poster="{{ site.baseurl }}/assets/img/students/{{ tier.testimonial.video }}.jpg">
+                <source 
+                src="{{ site.baseurl }}/assets/vid/{{ tier.testimonial.video }}.mp4" type="video/mp4">
+                <source 
+                src="{{ site.baseurl }}/assets/vid/{{ tier.testimonial.video }}.webm" type="video/webm">
+              </video>
             </div>
             <blockquote class="quote__txt">
               <p>{{ tier.testimonial.text }}</p>
@@ -40,3 +45,25 @@ secondary:
       {% endfor %}
     </ul>
 </section>
+<script type="text/javascript">
+  window.onload = function(){
+    var videos = document.querySelectorAll('video');
+    // loop through videos to attach event listeners
+    for (var i = 0; i < videos.length; i++) {
+      videos[i].addEventListener('click', function(){
+        // if muted...
+        if(this.muted === true){
+          // mute all videos
+          for (var i = 0; i < videos.length; i++) {
+            videos[i].muted = true;
+          };
+          // unmute
+          this.muted = false;
+        }else{
+          // mute
+          this.muted = true;
+        }
+      })
+    };
+  }
+</script>
