@@ -30,11 +30,10 @@ secondary:
         <li class="quote {{direction}}">
           {% if tier.testimonial %}
             <div class="quote__img">
-              <img src="http://placehold.it/300x300">
+              <img src="{{ site.baseurl }}/assets/img/students/{{ tier.testimonial.video }}.jpg">
             </div>
             <blockquote class="quote__txt">
               <p>{{ tier.testimonial.text }}</p>
-              <cite>{{ tier.testimonial.name }}</cite>
             </blockquote>
           {% endif %}
         </li>

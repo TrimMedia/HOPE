@@ -285,28 +285,35 @@ Components
 .quote{
 	width: 85%;
 	margin: 0 auto;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	text-align: left;
-	justify-content: space-around;
+
+	@include media-query($tablet){
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		text-align: left;
+		justify-content: space-around;
+
+		&--reverse{
+			flex-direction: row-reverse;
+			> .quote__txt{
+				margin-right: 1.5em;
+				margin-left: 0;
+			}
+		}
+
+		&__txt{
+			margin-right: 0;
+		}
+	}
 
 	&__img{
 		width: 8rem;
-		height: 8rem;
 		border-radius: 100%;
 		overflow: hidden;
-	}
+		margin: 1.5em auto;
 
-	&__txt{
-		margin-right: 0;
-	}
-
-	&--reverse{
-		flex-direction: row-reverse;
-		> .quote__txt{
-			margin-right: 1.5em;
-			margin-left: 0;
+		& > img{
+			display: block;
 		}
 	}
 }

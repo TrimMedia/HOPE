@@ -6,8 +6,7 @@
           program, have two meals each day, and be partnered with a young 
           professional to mentor him/her throughout the following school year.
   testimonial:
-    url: ''
-    name: 'John'
+    video: '1'
     text: >
             It really changed my whole total outlook on the world. Before I came 
             to leadership I was a horrible person, and now since leadership I’ve 
@@ -21,8 +20,7 @@
           the program.  This will also provide one week of Continuing Education 
           Units for participating educators.
   testimonial:
-    url: ''
-    name: 'Jen'
+    video: '2'
     text: >
             They found a voice and they found a purpose that I think they 
             otherwise would not have had, and it started with us having confidence 
@@ -36,8 +34,7 @@
           • Announced as sponsor at graduation ceremony<br>
           • Personalized thank you letter from participating students
   testimonial:
-    url: ''
-    name: 'Jake'
+    video: '3'
     text: >
             To be a leader you can’t just boss people around. You have to listen 
             to others and do stuff that they want to do too.
@@ -51,8 +48,7 @@
           business / organization to all students, parents, and teachers 
           participating in the program
   testimonial:
-    url: ''
-    name: 'Jessica'
+    video: '4'
     text: >
             Before leadership academy I didn’t feel like I couldn't do anything about 
             bullying. I didn’t feel like what I said mattered. Now, after leadership 
@@ -67,8 +63,7 @@
           • Listed on program day agendas throughout the week<br>
           • Company Logo on Facebook page
   testimonial:
-    url: ''
-    name: 'Jeremy'
+    video: '5'
     text: >
             I just hope I make it back next time.
 
