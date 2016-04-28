@@ -9,9 +9,9 @@
     url: ''
     name: 'John'
     text: >
-            This program is the best for kids and teachers. So effective. So professional. Wow.
-            This program is the best for kids and teachers. So effective. So professional. Wow.
-            This program is the best for kids and teachers. So effective. So professional. Wow.
+            It really changed my whole total outlook on the world. Before I came 
+            to leadership I was a horrible person, and now since leadership I’ve 
+            been better than ever.
 
 - title: 'Sponsor a Teacher'
   price: '$750'
@@ -24,9 +24,10 @@
     url: ''
     name: 'Jen'
     text: >
-            This program is the best for kids and teachers. So effective. So professional. Wow.
-            This program is the best for kids and teachers. So effective. So professional. Wow.
-            This program is the best for kids and teachers. So effective. So professional. Wow.
+            They found a voice and they found a purpose that I think they 
+            otherwise would not have had, and it started with us having confidence 
+            in them. I am really grateful to have been a part of this and I know 
+            it’s changing their lives.
 
 - title: 'Mentor'
   price: '$1,500'
@@ -38,9 +39,8 @@
     url: ''
     name: 'Jake'
     text: >
-            This program is the best for kids and teachers. So effective. So professional. Wow.
-            This program is the best for kids and teachers. So effective. So professional. Wow.
-            This program is the best for kids and teachers. So effective. So professional. Wow.
+            To be a leader you can’t just boss people around. You have to listen 
+            to others and do stuff that they want to do too.
 
 - title: 'Collaborator'
   price: '$2,500'
@@ -54,9 +54,10 @@
     url: ''
     name: 'Jessica'
     text: >
-            This program is the best for kids and teachers. So effective. So professional. Wow.
-            This program is the best for kids and teachers. So effective. So professional. Wow.
-            This program is the best for kids and teachers. So effective. So professional. Wow.
+            Before leadership academy I didn’t feel like I couldn't do anything about 
+            bullying. I didn’t feel like what I said mattered. Now, after leadership 
+            academy, I see that I am powerful, that what I say matters, that people 
+            will listen, and that I can make a difference.
 
 - title: 'Motivator'
   price: '$5,000'
@@ -69,9 +70,7 @@
     url: ''
     name: 'Jeremy'
     text: >
-            This program is the best for kids and teachers. So effective. So professional. Wow.
-            This program is the best for kids and teachers. So effective. So professional. Wow.
-            This program is the best for kids and teachers. So effective. So professional. Wow.
+            I just hope I make it back next time.
 
 - title: 'Influencer'
   price: '$10,000'

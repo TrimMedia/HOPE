@@ -81,8 +81,7 @@ p > ul {
 a {
   text-decoration: none;
   color: inherit;
-  -webkit-transition: all .3s ease;
-          transition: all .3s ease;
+  transition: all .3s ease;
   display: inline-block; }
   a:hover, a:focus {
     color: #0d0d0d; }
@@ -118,10 +117,8 @@ option,
 button,
 input[type="submit"],
 .button {
-  -webkit-transition: .3s ease;
-          transition: .3s ease;
-  -webkit-transition-property: background color opacity;
-          transition-property: background color opacity;
+  transition: .3s ease;
+  transition-property: background color opacity;
   border-radius: 0.5em;
   border: none; }
 
@@ -301,7 +298,6 @@ Components
 
 .header__content {
   padding: 1.5em 0;
-  background: -webkit-linear-gradient(0deg, #f2f1f0 50%, rgba(242, 241, 240, 0));
   background: linear-gradient(90deg, #f2f1f0 50%, rgba(242, 241, 240, 0)); }
   @media screen and (min-width: 900px) {
     .header__content > .container {
@@ -318,11 +314,9 @@ Components
     height: 30%; }
   .banner:after {
     top: 0;
-    background: -webkit-linear-gradient(#f2f1f0, rgba(242, 241, 240, 0));
     background: linear-gradient(#f2f1f0, rgba(242, 241, 240, 0)); }
   .banner:before {
     bottom: 0;
-    background: -webkit-linear-gradient(bottom, #f2f1f0, rgba(242, 241, 240, 0));
     background: linear-gradient(bottom, #f2f1f0, rgba(242, 241, 240, 0)); }
   @media screen and (min-width: 900px) {
     .banner {
@@ -360,8 +354,7 @@ Components
     margin-right: 1em;
     color: #a9a8a8;
     cursor: pointer;
-    -webkit-transition: color .3s ease;
-            transition: color .3s ease; }
+    transition: color .3s ease; }
   .link-list--interactive > .link-list__item--active {
     color: #333333; }
 
@@ -370,22 +363,10 @@ Components
   margin-top: 1.5em; }
 
 .image-list {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
 
 .image-list__item {
   margin: 1em;
@@ -442,69 +423,37 @@ Components
 .cta-list {
   margin-top: 2em;
   text-align: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+  flex-wrap: wrap; }
 
 header + .cta-list {
   margin-top: 0; }
 
 .cta-list__item {
-  -webkit-flex-basis: 20em;
-      -ms-flex-preferred-size: 20em;
-          flex-basis: 20em;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-basis: 20em;
+  flex-grow: 1;
   font-size: .9em;
   line-height: 1.4em;
   padding: 3em 2em;
   margin: 0;
   overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; }
 
 .donation-list__item {
   padding: 1em;
   margin: 0;
-  -webkit-transition: background .3s ease;
-          transition: background .3s ease;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  transition: background .3s ease;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+  flex-wrap: wrap; }
   .donation-list__item:hover {
     background: #dfe4dd; }
   .donation-list__item:last-child {
     border-bottom: none; }
   .donation-list__item > .info {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 0 55%;
-        -ms-flex: 1 0 55%;
-            flex: 1 0 55%;
+    flex: 1 0 55%;
     margin-right: 5%; }
     .donation-list__item > .info > ul {
       list-style-type: circle;
@@ -536,7 +485,6 @@ header + .cta-list {
     height: 100%;
     width: .5em;
     content: '';
-    background: -webkit-linear-gradient(left, rgba(242, 241, 240, 0), #f2f1f0);
     background: linear-gradient(to right, rgba(242, 241, 240, 0), #f2f1f0);
     z-index: 1; }
   .timeline:before {
@@ -547,28 +495,17 @@ header + .cta-list {
     height: 100%;
     width: .5em;
     content: '';
-    background: -webkit-linear-gradient(right, rgba(242, 241, 240, 0), #f2f1f0);
     background: linear-gradient(to left, rgba(242, 241, 240, 0), #f2f1f0);
     z-index: 1; }
 
 .quote {
   width: 85%;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
   text-align: left;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around; }
+  justify-content: space-around; }
   .quote__img {
     width: 8rem;
     height: 8rem;
@@ -577,11 +514,7 @@ header + .cta-list {
   .quote__txt {
     margin-right: 0; }
   .quote--reverse {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-    -webkit-flex-direction: row-reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse; }
+    flex-direction: row-reverse; }
     .quote--reverse > .quote__txt {
       margin-right: 1.5em;
       margin-left: 0; }
@@ -591,7 +524,6 @@ header + .cta-list {
   height: 2px;
   background: #a9a8a8;
   position: absolute;
-  bottom: -webkit-calc(1.5em - 2px);
   bottom: calc(1.5em - 2px);
   z-index: -1;
   margin-bottom: 1em; }
@@ -644,3 +576,5 @@ Trumps & Hacks
 
 .u-hidden {
   display: none; }
+
+/*# sourceMappingURL=main.css.map */
