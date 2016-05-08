@@ -6,20 +6,9 @@ Components
 	width: 100%;
 	padding: $spacing-unit 15%;
 	margin: 0;
-	background: $dark-green;
-	color: $white;
 
-	&__cta{
-		font-family: $font-alt;
-		margin-top: $spacing-unit/2;
-		font-size: .75em;
-		font-weight: 500;
-		opacity: .7;
-
-		&:hover{
-			opacity: 1;
-			color: inherit;
-		}
+	& .button{
+		font-size: .8em;
 	}
 }
 
@@ -83,10 +72,6 @@ Components
 .link-list__item{
 	margin-top: .5em;
 
-	> a:hover{
-		opacity: .5;
-	}
-
 	@include media-query($laptop){
 		display: inline-block;
 		margin-right: 2em;
@@ -117,11 +102,6 @@ Components
 		@extend .link-list__item;
 		color: $text-color;
 	}
-}
-
-.sponsors{
-	color: $dark-gray;
-	text-align: center;
 }
 
 .image-list{
@@ -454,5 +434,22 @@ Components
 		& iframe{
 			margin-top: 1em !important;
 		}
+	}
+}
+
+.footer{
+	text-align: center;
+	color: $dark-gray;
+
+	& a:hover{
+		color: $black;
+	}
+
+	& h4{
+		text-align: center;
+	}
+	.sponsors{
+		font-size: .75em;
+		text-align: center;
 	}
 }

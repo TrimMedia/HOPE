@@ -229,8 +229,8 @@ input[type="submit"],
   .logo--small {
     max-width: 7.5em; }
   .logo--smaller {
-    max-width: 5em;
-    margin: 0 1.5em; }
+    max-width: 2.5em;
+    margin: 0 .5em; }
 
 .title {
   font-family: Avenir, "Avenir", Helvetica, sans-serif;
@@ -315,18 +315,9 @@ Components
 .promo {
   width: 100%;
   padding: 1em 15%;
-  margin: 0;
-  background: #33662e;
-  color: #f2f1f0; }
-  .promo__cta {
-    font-family: Avenir, "Avenir", Helvetica, sans-serif;
-    margin-top: 0.5em;
-    font-size: .75em;
-    font-weight: 500;
-    opacity: .7; }
-    .promo__cta:hover {
-      opacity: 1;
-      color: inherit; }
+  margin: 0; }
+  .promo .button {
+    font-size: .8em; }
 
 .header {
   margin-top: 0;
@@ -377,8 +368,6 @@ Components
 
 .link-list__item, .link-list--interactive > .link-list__item--active {
   margin-top: .5em; }
-  .link-list__item > a:hover, .link-list--interactive > .link-list__item--active > a:hover {
-    opacity: .5; }
   @media screen and (min-width: 900px) {
     .link-list__item, .link-list--interactive > .link-list__item--active {
       display: inline-block;
@@ -402,10 +391,6 @@ Components
             transition: color .3s ease; }
   .link-list--interactive > .link-list__item--active {
     color: #333333; }
-
-.sponsors {
-  color: #808080;
-  text-align: center; }
 
 .image-list {
   display: -webkit-box;
@@ -732,6 +717,17 @@ header + .cta-list {
                 align-items: center; } }
     .overlay .container iframe {
       margin-top: 1em !important; }
+
+.footer {
+  text-align: center;
+  color: #808080; }
+  .footer a:hover {
+    color: #333333; }
+  .footer h4 {
+    text-align: center; }
+  .footer .sponsors {
+    font-size: .75em;
+    text-align: center; }
 
 /* 
 Trumps & Hacks 
