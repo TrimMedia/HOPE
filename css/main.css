@@ -619,7 +619,7 @@ header + .cta-list {
     .quote__img > video {
       max-width: 100%; }
       .quote__img > video::-webkit-media-controls-start-playback-button {
-        display: none !important; }
+        opacity: 0; }
 
 .timeline__line {
   width: 100%;
