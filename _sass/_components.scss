@@ -6,7 +6,7 @@ Components
 	width: 100%;
 	padding: $spacing-unit 15%;
 	margin: 0;
-	background: $blue;
+	background: $dark-green;
 	color: $white;
 
 	&__cta{
@@ -351,6 +351,9 @@ Components
 
 		& > video{
 			max-width: 100%;
+			&::-webkit-media-controls {
+			    display: none !important;
+			}
 		}
 	}
 }
@@ -436,6 +439,7 @@ Components
 	margin: 0;
 	z-index: 100;
 	overflow: auto;
+	-webkit-overflow-scrolling : touch;
 
 	& .container{
 		height: 100%;

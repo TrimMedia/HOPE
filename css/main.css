@@ -295,7 +295,7 @@ Components
   width: 100%;
   padding: 1em 15%;
   margin: 0;
-  background: #495f99;
+  background: #33662e;
   color: #f2f1f0; }
   .promo__cta {
     font-family: Avenir, "Avenir", Helvetica, sans-serif;
@@ -618,6 +618,8 @@ header + .cta-list {
       display: block; }
     .quote__img > video {
       max-width: 100%; }
+      .quote__img > video::-webkit-media-controls {
+        display: none !important; }
 
 .timeline__line {
   width: 100%;
@@ -688,7 +690,8 @@ header + .cta-list {
   background: rgba(255, 255, 255, 0.95);
   margin: 0;
   z-index: 100;
-  overflow: auto; }
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; }
   .overlay .container {
     height: 100%;
     margin: 1em auto; }
