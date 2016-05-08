@@ -21,7 +21,7 @@ textarea,
 select,
 option,
 button {
-  font-family: "adobe-garamond-pro", serif;
+  font-family: Garamond Pro, "adobe-garamond-pro", Garamond, serif;
   font-size: 20px;
   line-height: 1.4em;
   /*
@@ -37,7 +37,7 @@ button {
     select,
     option,
     button {
-      font-size: 30px; } }
+      font-size: 25px; } }
 
 button,
 input[type="submit"] {
@@ -52,7 +52,7 @@ Base
   margin-top: 1em; }
 
 html {
-  font-family: "adobe-garamond-pro", serif; }
+  font-family: Garamond Pro, "adobe-garamond-pro", Garamond, serif; }
 
 body {
   margin-top: 0;
@@ -100,7 +100,7 @@ blockquote {
     background-size: 3em; }
   blockquote cite {
     display: block;
-    font-family: "Avenir", sans-serif;
+    font-family: Avenir, "Avenir", Helvetica, sans-serif;
     font-size: .75em;
     color: #333333; }
     blockquote cite:before {
@@ -162,7 +162,7 @@ input[type="checkbox"] {
 button,
 input[type="submit"],
 .button {
-  font-family: "Avenir", sans-serif;
+  font-family: Avenir, "Avenir", Helvetica, sans-serif;
   font-style: italic;
   font-weight: 500;
   background: rgba(128, 128, 128, 0.5);
@@ -212,7 +212,7 @@ input[type="submit"],
     max-width: 7.5em; }
 
 .title {
-  font-family: "Avenir", sans-serif;
+  font-family: Avenir, "Avenir", Helvetica, sans-serif;
   font-style: italic;
   font-weight: normal;
   text-align: center;
@@ -233,7 +233,7 @@ input[type="submit"],
   color: #808080; }
 
 .subheading {
-  font-family: "Avenir", sans-serif;
+  font-family: Avenir, "Avenir", Helvetica, sans-serif;
   font-style: italic;
   font-weight: normal;
   color: #a9a8a8;
@@ -291,7 +291,24 @@ Objects
 /* 
 Components
 */
+.promo {
+  width: 100%;
+  padding: 1em 15%;
+  margin: 0;
+  background: #495f99;
+  color: #f2f1f0; }
+  .promo__cta {
+    font-family: Avenir, "Avenir", Helvetica, sans-serif;
+    margin-top: 0.5em;
+    font-size: .75em;
+    font-weight: 500;
+    opacity: .7; }
+    .promo__cta:hover {
+      opacity: 1;
+      color: inherit; }
+
 .header {
+  margin-top: 0;
   background-size: 0; }
   @media screen and (min-width: 900px) {
     .header {
@@ -334,7 +351,7 @@ Components
 .link-list, .link-list--interactive {
   margin: 0 auto;
   text-align: center;
-  font-family: "Avenir", sans-serif;
+  font-family: Avenir, "Avenir", Helvetica, sans-serif;
   margin-bottom: 1em; }
 
 .link-list__item, .link-list--interactive > .link-list__item--active {
@@ -522,7 +539,7 @@ header + .cta-list {
   .donation-list__item > .price {
     margin: auto 0;
     width: 9rem;
-    font-family: "Avenir", sans-serif;
+    font-family: Avenir, "Avenir", Helvetica, sans-serif;
     font-style: italic;
     color: #33662e;
     font-size: 2em;

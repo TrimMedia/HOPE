@@ -2,7 +2,29 @@
 Components
 */
 
+.promo{
+	width: 100%;
+	padding: $spacing-unit 15%;
+	margin: 0;
+	background: $blue;
+	color: $white;
+
+	&__cta{
+		font-family: $font-alt;
+		margin-top: $spacing-unit/2;
+		font-size: .75em;
+		font-weight: 500;
+		opacity: .7;
+
+		&:hover{
+			opacity: 1;
+			color: inherit;
+		}
+	}
+}
+
 .header{
+	margin-top: 0;
 	background-size: 0;
 	@include media-query($laptop){
 		background-size: cover;
