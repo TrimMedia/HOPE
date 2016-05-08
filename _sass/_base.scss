@@ -179,15 +179,30 @@ input[type="submit"],
 	}
 }
 
+.logo-group{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
 .logo{
 	max-width: 12.5em;
 	display: block;
 	margin: 0 auto;
 	text-align: center;
 
-	&.-gray{
+	&--gray{
 		opacity: .25;
+	}
+
+	&--small{
 		max-width: 7.5em;
+	}
+
+	&--smaller{
+		max-width: 5em;
+		margin: 0 1.5em;
 	}
 }
 

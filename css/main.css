@@ -202,14 +202,35 @@ input[type="submit"],
     color: inherit;
     border: 2px solid; }
 
+.logo-group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
 .logo {
   max-width: 12.5em;
   display: block;
   margin: 0 auto;
   text-align: center; }
-  .logo.-gray {
-    opacity: .25;
+  .logo--gray {
+    opacity: .25; }
+  .logo--small {
     max-width: 7.5em; }
+  .logo--smaller {
+    max-width: 5em;
+    margin: 0 1.5em; }
 
 .title {
   font-family: Avenir, "Avenir", Helvetica, sans-serif;
