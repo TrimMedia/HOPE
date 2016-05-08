@@ -430,9 +430,9 @@ Components
   overflow: hidden;
   text-align: center;
   max-width: 5em; }
-  .image-list__item > img {
+  .image-list__item img {
     border-radius: 100%; }
-  .image-list__item > p {
+  .image-list__item p {
     font-size: .9em;
     line-height: 1.2em;
     margin-top: 0; }

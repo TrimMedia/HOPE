@@ -137,11 +137,11 @@ Components
 	text-align: center;
 	max-width: 5em;
 
-	> img{
+	& img{
 		border-radius: 100%;
 	}
 
-	> p{
+	& p{
 		font-size: .9em;
 		line-height: 1.2em;
 		margin-top: 0;
