@@ -351,8 +351,9 @@ Components
 
 		& > video{
 			max-width: 100%;
-			&::-webkit-media-controls {
-			    display: none !important;
+			
+			&::-webkit-media-controls-start-playback-button {
+			  display: none !important;
 			}
 		}
 	}

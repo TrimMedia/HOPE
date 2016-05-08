@@ -618,7 +618,7 @@ header + .cta-list {
       display: block; }
     .quote__img > video {
       max-width: 100%; }
-      .quote__img > video::-webkit-media-controls {
+      .quote__img > video::-webkit-media-controls-start-playback-button {
         display: none !important; }
 
 .timeline__line {
