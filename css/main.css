@@ -426,8 +426,10 @@ Components
   margin-bottom: 1em;
   padding-bottom: 1em; }
 
-.graph-list__item:last-child {
-  margin-bottom: 1em; }
+.graph-list__item img {
+  max-height: 20rem;
+  display: block;
+  margin: 0 auto; }
 
 .graph-list__item figcaption {
   font-family: "Avenir";

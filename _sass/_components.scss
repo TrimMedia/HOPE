@@ -134,8 +134,11 @@ Components
 }
 
 .graph-list__item{
-	&:last-child{
-		margin-bottom: 1em;
+
+	& img{
+		max-height: 20rem;
+		display: block;
+		margin: 0 auto;
 	}
 
 	& figcaption{
