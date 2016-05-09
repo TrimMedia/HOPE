@@ -5,8 +5,8 @@ description: >
   provide leadership and mentoring training through our three year, service oriented program, 
   and furnish program graduates as peer mentors to students in poverty.  Our goal is to decrease 
   the dropout rate and thus improve the quality of life in our schools, communities, and state.
-baseurl: "/HOPE" # the subpath of your site, e.g. /blog/
-url: "" # the base hostname & protocol for your site
+baseurl: ""
+url: ""
 link: http://hopeleadershipacademy.org
 image: "{{ site.baseurl }}/assets/img/HOPE_logo.svg"
 
