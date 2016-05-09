@@ -330,8 +330,8 @@ Components
 
 .header__content {
   padding: 1.5em 0;
-  background: -webkit-linear-gradient(0deg, #f2f1f0 50%, rgba(242, 241, 240, 0));
-  background: linear-gradient(90deg, #f2f1f0 50%, rgba(242, 241, 240, 0)); }
+  background: -webkit-linear-gradient(0deg, #f2f1f0 75%, rgba(242, 241, 240, 0));
+  background: linear-gradient(90deg, #f2f1f0 75%, rgba(242, 241, 240, 0)); }
   @media screen and (min-width: 900px) {
     .header__content > .container {
       width: 100%;

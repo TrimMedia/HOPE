@@ -24,7 +24,7 @@ Components
 
 .header__content{
 	padding: 1.5em 0;
-	background: linear-gradient(90deg, $bg-color 50%, transparentize($bg-color,1));
+	background: linear-gradient(90deg, $bg-color 75%, transparentize($bg-color,1));
 
 	@include media-query($laptop){
 		>.container{
