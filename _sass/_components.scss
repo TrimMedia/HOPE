@@ -156,25 +156,38 @@ Components
 .graph-list{
 	margin-bottom: $spacing-unit;
 	padding-bottom: $spacing-unit;
-}
 
-.graph-list__item{
-
-	& img{
-		max-height: 20rem;
+	&__img{
 		display: block;
 		margin: 0 auto;
+
+		&--wide{
+			display: none;
+		}
+		// swith out images at laptop breakpoint
+		@include media-query($laptop){
+			&--tall{
+				display: none;
+			}
+
+			&--wide{
+				display: block;
+			}
+		}
 	}
 
-	& figcaption{
-		font-family: "Avenir";
-		font-size: .75em;
-		font-style: italic;
-		text-align: center;
-		line-height: 1.4em;
-		color: $light-gray;
+	&__item{
+		& figcaption{
+			font-family: "Avenir";
+			font-size: .75em;
+			font-style: italic;
+			text-align: center;
+			line-height: 1.4em;
+			color: $light-gray;
+		}
 	}
 }
+
 
 .btn{
 	&--small{

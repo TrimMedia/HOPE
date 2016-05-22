@@ -448,19 +448,23 @@ Components
 .graph-list {
   margin-bottom: 1em;
   padding-bottom: 1em; }
-
-.graph-list__item img {
-  max-height: 20rem;
-  display: block;
-  margin: 0 auto; }
-
-.graph-list__item figcaption {
-  font-family: "Avenir";
-  font-size: .75em;
-  font-style: italic;
-  text-align: center;
-  line-height: 1.4em;
-  color: #a9a8a8; }
+  .graph-list__img {
+    display: block;
+    margin: 0 auto; }
+    .graph-list__img--wide {
+      display: none; }
+    @media screen and (min-width: 900px) {
+      .graph-list__img--tall {
+        display: none; }
+      .graph-list__img--wide {
+        display: block; } }
+  .graph-list__item figcaption {
+    font-family: "Avenir";
+    font-size: .75em;
+    font-style: italic;
+    text-align: center;
+    line-height: 1.4em;
+    color: #a9a8a8; }
 
 .btn--small {
   font-size: .75em; }
