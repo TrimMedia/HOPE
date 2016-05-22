@@ -28,7 +28,7 @@ Components
 
 	@include media-query($laptop){
 		>.container{
-			width: 100%;
+			width: 90%;
 			max-width: 15em;
 		}
 	}
@@ -36,6 +36,31 @@ Components
 
 .banner{
 	position: relative;
+
+	&--col{
+		display: none;
+
+		@include media-query($tablet){
+			display: block;
+			margin-top: 0;
+			background-size: cover;
+			background-position: center;
+			position: relative;
+		}
+
+		&:before{
+			display: block;
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			height: 100%;
+			width: 15%;
+			background: linear-gradient(to right, $white, transparentize($white,1)); 
+		}
+	}
+
 	&:after,
 	&:before{
 		display: block;
@@ -131,25 +156,38 @@ Components
 .graph-list{
 	margin-bottom: $spacing-unit;
 	padding-bottom: $spacing-unit;
-}
 
-.graph-list__item{
-
-	& img{
-		max-height: 20rem;
+	&__img{
 		display: block;
 		margin: 0 auto;
+
+		&--wide{
+			display: none;
+		}
+		// swith out images at laptop breakpoint
+		@include media-query($laptop){
+			&--tall{
+				display: none;
+			}
+
+			&--wide{
+				display: block;
+			}
+		}
 	}
 
-	& figcaption{
-		font-family: "Avenir";
-		font-size: .75em;
-		font-style: italic;
-		text-align: center;
-		line-height: 1.4em;
-		color: $light-gray;
+	&__item{
+		& figcaption{
+			font-family: "Avenir";
+			font-size: .75em;
+			font-style: italic;
+			text-align: center;
+			line-height: 1.4em;
+			color: $light-gray;
+		}
 	}
 }
+
 
 .btn{
 	&--small{

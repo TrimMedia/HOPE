@@ -286,28 +286,31 @@ Objects
     .container {
       width: 60%; } }
 
-.row:before, .row:after {
-  content: " ";
-  display: table; }
-
-.row:after {
-  clear: both; }
-
-@media screen and (min-width: 900px) {
-  .row > .column {
-    float: left; }
-    .row > .column.full {
-      width: 100%; }
-    .row > .column.two-thirds {
-      width: 66.7%; }
-    .row > .column.half {
-      width: 50%; }
-    .row > .column.third {
-      width: 33.3%; }
-    .row > .column.fourth {
-      width: 25%; }
-  .row.-reverse > .column {
-    float: right; } }
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .row:before, .row:after {
+    content: " ";
+    display: table; }
+  .row:after {
+    clear: both; }
+  @media screen and (min-width: 900px) {
+    .row > .column {
+      float: left; }
+      .row > .column.full {
+        width: 100%; }
+      .row > .column.two-thirds {
+        width: 66.7%; }
+      .row > .column.half {
+        width: 50%; }
+      .row > .column.third {
+        width: 33.3%; }
+      .row > .column.fourth {
+        width: 25%; }
+    .row.-reverse > .column {
+      float: right; } }
 
 /* 
 Components
@@ -334,11 +337,31 @@ Components
   background: linear-gradient(90deg, #f2f1f0 75%, rgba(242, 241, 240, 0)); }
   @media screen and (min-width: 900px) {
     .header__content > .container {
-      width: 100%;
+      width: 90%;
       max-width: 15em; } }
 
 .banner {
   position: relative; }
+  .banner--col {
+    display: none; }
+    @media screen and (min-width: 600px) {
+      .banner--col {
+        display: block;
+        margin-top: 0;
+        background-size: cover;
+        background-position: center;
+        position: relative; } }
+    .banner--col:before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 15%;
+      background: -webkit-linear-gradient(left, #f2f1f0, rgba(242, 241, 240, 0));
+      background: linear-gradient(to right, #f2f1f0, rgba(242, 241, 240, 0)); }
   .banner:after, .banner:before {
     display: block;
     content: '';
@@ -425,19 +448,23 @@ Components
 .graph-list {
   margin-bottom: 1em;
   padding-bottom: 1em; }
-
-.graph-list__item img {
-  max-height: 20rem;
-  display: block;
-  margin: 0 auto; }
-
-.graph-list__item figcaption {
-  font-family: "Avenir";
-  font-size: .75em;
-  font-style: italic;
-  text-align: center;
-  line-height: 1.4em;
-  color: #a9a8a8; }
+  .graph-list__img {
+    display: block;
+    margin: 0 auto; }
+    .graph-list__img--wide {
+      display: none; }
+    @media screen and (min-width: 900px) {
+      .graph-list__img--tall {
+        display: none; }
+      .graph-list__img--wide {
+        display: block; } }
+  .graph-list__item figcaption {
+    font-family: "Avenir";
+    font-size: .75em;
+    font-style: italic;
+    text-align: center;
+    line-height: 1.4em;
+    color: #a9a8a8; }
 
 .btn--small {
   font-size: .75em; }

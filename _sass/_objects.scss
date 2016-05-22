@@ -20,6 +20,8 @@ Objects
 }
 
 .row{
+	display: flex;
+
 	&:before, &:after{
 		content: " ";
 		display: table;
